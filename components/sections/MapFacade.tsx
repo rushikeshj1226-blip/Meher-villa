@@ -16,7 +16,7 @@ export function MapFacade({ lat, lng, image }: { lat: number; lng: number; image
           title="Map showing Meher Villa, Lonavala"
           src={`https://maps.google.com/maps?q=${lat},${lng}&z=15&output=embed`}
           loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
+          referrerPolicy="strict-origin-when-cross-origin"
           className="absolute inset-0 size-full border-0"
         />
       ) : (
