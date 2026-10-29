@@ -123,7 +123,7 @@ export function EnquiryForm() {
         {error("name")}
       </div>
 
-      <div className="grid gap-5 sm:grid-cols-2">
+      <div className="grid gap-5 *:min-w-0 sm:grid-cols-2">
         <div>
           <label htmlFor="enquiry-checkIn" className="mb-1.5 block text-sm text-white/85">
             Check-in
@@ -140,7 +140,7 @@ export function EnquiryForm() {
         </div>
       </div>
 
-      <div className="grid gap-5 sm:grid-cols-2">
+      <div className="grid gap-5 *:min-w-0 sm:grid-cols-2">
         <div>
           <label htmlFor="enquiry-guests" className="mb-1.5 block text-sm text-white/85">
             Number of guests

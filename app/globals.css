@@ -45,6 +45,28 @@
     background-color: var(--color-cream);
     color: var(--color-ink);
     -webkit-font-smoothing: antialiased;
+    /* Safety net: nothing may make the page wider than the screen (stops sideways wobble on phones).
+       `clip` doesn't create a scroll container, so window scrolling and fixed elements are unaffected. */
+    overflow-x: hidden;
+  }
+
+  @supports (overflow: clip) {
+    html,
+    body {
+      overflow-x: clip;
+    }
+  }
+
+  /* iOS Safari gives date fields a fixed intrinsic width that ignores width: 100% and pushes the
+     page wider than the screen; this lets them shrink to their column like other inputs. */
+  input[type="date"] {
+    -webkit-appearance: none;
+    appearance: none;
+    min-width: 0;
+  }
+
+  input[type="date"]::-webkit-date-and-time-value {
+    text-align: left;
   }
 
   h1,

@@ -35,7 +35,7 @@ export function HeaderShell({ children }: { children: React.ReactNode }) {
   return (
     <header
       data-state={state}
-      className="group fixed inset-x-0 top-0 z-40 border-b border-transparent text-white transition-[background-color,color,border-color,box-shadow,backdrop-filter] duration-300 data-[state=glass]:border-white/15 data-[state=glass]:bg-white/10 data-[state=glass]:shadow-[0_8px_32px_rgb(0_0_0/0.12)] data-[state=glass]:backdrop-blur-xl data-[state=glass]:backdrop-saturate-150 data-[state=solid]:border-line/70 data-[state=solid]:bg-cream/70 data-[state=solid]:text-ink data-[state=solid]:shadow-[0_8px_32px_rgb(43_34_28/0.08)] data-[state=solid]:backdrop-blur-xl data-[state=solid]:backdrop-saturate-150"
+      className="group fixed inset-x-0 top-0 z-40 border-b border-transparent text-white transition-[background-color,color,border-color,box-shadow,backdrop-filter] duration-300 data-[state=glass]:border-white/15 data-[state=glass]:bg-white/10 data-[state=glass]:shadow-[0_8px_32px_rgb(0_0_0/0.12)] data-[state=glass]:backdrop-blur-xl data-[state=glass]:backdrop-saturate-150 data-[state=solid]:border-line/70 data-[state=solid]:bg-cream/90 data-[state=solid]:text-ink data-[state=solid]:shadow-[0_8px_32px_rgb(43_34_28/0.08)] data-[state=solid]:backdrop-blur-xl data-[state=solid]:backdrop-saturate-150"
     >
       {children}
     </header>

@@ -12,7 +12,7 @@ export function Enquiry() {
 
   return (
     <section id="enquire" aria-labelledby="enquire-title" className="bg-brown text-white">
-      <div className="grid lg:grid-cols-[1fr_1.15fr]">
+      <div className="grid *:min-w-0 lg:grid-cols-[1fr_1.15fr]">
         <div className="relative hidden lg:block">
           <Image src={photo.src} alt={photo.alt} fill placeholder="blur" sizes="45vw" className="object-cover" />
           <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/10 to-transparent" />

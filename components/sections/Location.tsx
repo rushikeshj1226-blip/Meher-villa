@@ -23,8 +23,8 @@ export function Location() {
             <address className="mt-5 max-w-sm text-sm not-italic leading-relaxed text-white/60">{villa.address.full}</address>
             <dl className="mt-8 grid w-full max-w-md grid-cols-3 divide-x divide-white/15">
               {location.distances.map((item) => (
-                <div key={item.from} className="flex flex-col-reverse px-2">
-                  <dt className="mt-1 text-[11px] uppercase tracking-[0.16em] text-white/55">{item.from}</dt>
+                <div key={item.from} className="flex flex-col-reverse justify-end px-2">
+                  <dt className="mt-1 text-[11px] uppercase tracking-[0.1em] text-white/55 sm:tracking-[0.16em]">{item.from}</dt>
                   <dd className="font-serif text-lg">{item.value}</dd>
                 </div>
               ))}

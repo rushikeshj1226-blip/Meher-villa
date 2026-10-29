@@ -34,10 +34,11 @@ export function About() {
               <p key={text.slice(0, 24)}>{text}</p>
             ))}
           </div>
+          {/* Each value shows above its label (column-reverse); justify-end keeps every value on the same top line. */}
           <dl className="mt-8 flex justify-center gap-10 lg:justify-start">
             {about.stats.map((stat) => (
-              <div key={stat.label} className="flex flex-col-reverse">
-                <dt className="mt-1 text-xs uppercase tracking-[0.18em] text-muted">{stat.label}</dt>
+              <div key={stat.label} className="flex flex-col-reverse justify-end">
+                <dt className="mt-1 text-xs uppercase tracking-[0.12em] text-muted sm:tracking-[0.18em]">{stat.label}</dt>
                 <dd className="font-serif text-3xl">{stat.value}</dd>
               </div>
             ))}
