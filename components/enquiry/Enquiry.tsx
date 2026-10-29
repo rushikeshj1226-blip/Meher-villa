@@ -4,6 +4,7 @@ import { enquiry, gallery, messages } from "@/content/villa";
 import { formatPhone, site, whatsappUrl } from "@/lib/site";
 import { Eyebrow } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/Icon";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { EnquiryForm } from "./EnquiryForm";
 
 export function Enquiry() {
@@ -20,7 +21,7 @@ export function Enquiry() {
             {whatsapp && (
               <li>
                 <a href={whatsapp} target="_blank" rel="noopener" className="inline-flex items-center gap-2.5 hover:text-gold">
-                  <Icon name="chat" className="size-4" />
+                  <WhatsAppIcon className="size-[18px] text-whatsapp" />
                   Chat on WhatsApp
                 </a>
               </li>

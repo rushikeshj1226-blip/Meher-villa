@@ -3,7 +3,7 @@ import Image from "next/image";
 import { hero, messages } from "@/content/villa";
 import { whatsappUrl } from "@/lib/site";
 import { buttonStyles } from "@/components/ui/SectionHeading";
-import { Icon } from "@/components/ui/Icon";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 export function Hero() {
   const whatsapp = whatsappUrl(messages.general);
@@ -37,7 +37,7 @@ export function Hero() {
           </a>
           {whatsapp && (
             <a href={whatsapp} target="_blank" rel="noopener" className={buttonStyles.ghostLight}>
-              <Icon name="chat" className="size-4" />
+              <WhatsAppIcon className="size-[18px] text-whatsapp" />
               Chat on WhatsApp
             </a>
           )}

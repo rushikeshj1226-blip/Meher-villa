@@ -4,6 +4,7 @@ import { day, messages, pets, play } from "@/content/villa";
 import { whatsappUrl } from "@/lib/site";
 import { Eyebrow, SectionHeading, buttonStyles } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/Icon";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 export function Play() {
   return (
@@ -57,6 +58,7 @@ export function PetBand() {
               {...(whatsapp && { target: "_blank", rel: "noopener" })}
               className={buttonStyles.gold}
             >
+              {whatsapp && <WhatsAppIcon className="size-[18px]" />}
               Check Pet-Friendly Dates
             </a>
           </div>

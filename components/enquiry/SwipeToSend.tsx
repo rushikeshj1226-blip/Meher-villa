@@ -9,7 +9,15 @@ const THRESHOLD = 0.85;
 
 // A slide-to-confirm control. Dragging the handle to the end calls onComplete;
 // keyboard users can press Enter or Space on the handle instead.
-export function SwipeToSend({ label, onComplete }: { label: string; onComplete: () => boolean }) {
+export function SwipeToSend({
+  label,
+  icon,
+  onComplete,
+}: {
+  label: string;
+  icon?: React.ReactNode;
+  onComplete: () => boolean;
+}) {
   const trackRef = useRef<HTMLDivElement>(null);
   const startRef = useRef(0);
   const xRef = useRef(0);
@@ -52,7 +60,10 @@ export function SwipeToSend({ label, onComplete }: { label: string; onComplete: 
         className="pointer-events-none absolute inset-0 grid place-items-center pl-12 text-[15px] font-medium"
         style={{ opacity: 1 - progress * 1.2 }}
       >
-        {label}
+        <span className="inline-flex items-center gap-2">
+          {icon}
+          {label}
+        </span>
       </span>
       <button
         type="button"

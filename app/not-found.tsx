@@ -1,6 +1,7 @@
 import { messages } from "@/content/villa";
 import { whatsappUrl } from "@/lib/site";
 import { Eyebrow, buttonStyles } from "@/components/ui/SectionHeading";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 export default function NotFound() {
   const whatsapp = whatsappUrl(messages.general);
@@ -16,6 +17,7 @@ export default function NotFound() {
         </a>
         {whatsapp && (
           <a href={whatsapp} target="_blank" rel="noopener" className={buttonStyles.outline}>
+            <WhatsAppIcon className="size-[18px] text-whatsapp" />
             Chat on WhatsApp
           </a>
         )}

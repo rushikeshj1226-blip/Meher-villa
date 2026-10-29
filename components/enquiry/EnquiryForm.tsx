@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 
 import { whatsappUrl } from "@/lib/site";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { SwipeToSend } from "./SwipeToSend";
 
 type Values = {
@@ -10,13 +11,11 @@ type Values = {
   checkIn: string;
   checkOut: string;
   guests: string;
-  pets: "none" | "1" | "2+";
-  petDetails: string;
   message: string;
 };
 type Field = keyof Values;
 
-const initial: Values = { name: "", checkIn: "", checkOut: "", guests: "", pets: "none", petDetails: "", message: "" };
+const initial: Values = { name: "", checkIn: "", checkOut: "", guests: "", message: "" };
 const fieldOrder: Field[] = ["name", "checkIn", "checkOut", "guests", "message"];
 
 const localIsoDate = (date: Date) =>
@@ -42,7 +41,6 @@ function validate(values: Values, today: string) {
 
 function buildMessage(values: Values) {
   const nights = nightsBetween(values.checkIn, values.checkOut);
-  const pets = values.pets === "none" ? null : `${values.pets === "1" ? "1 pet" : "2 or more pets"}${values.petDetails.trim() ? ` (${values.petDetails.trim()})` : ""}`;
   return [
     "Hi Meher Villa! I'd like to check availability.",
     "",
@@ -50,7 +48,6 @@ function buildMessage(values: Values) {
     `Check-in: ${formatDate(values.checkIn)}`,
     `Check-out: ${formatDate(values.checkOut)} (${nights} ${nights === 1 ? "night" : "nights"})`,
     `Guests: ${values.guests}`,
-    pets ? `Pets: ${pets}` : null,
     values.message.trim() ? `Message: ${values.message.trim()}` : null,
     "",
     "Sent from the Meher Villa website",
@@ -140,34 +137,13 @@ export function EnquiryForm() {
         </div>
       </div>
 
-      <div className="grid gap-5 *:min-w-0 sm:grid-cols-2">
-        <div>
-          <label htmlFor="enquiry-guests" className="mb-1.5 block text-sm text-white/85">
-            Number of guests
-          </label>
-          <input type="number" inputMode="numeric" min={1} max={60} placeholder="e.g. 6" className={inputClass} {...fieldProps("guests")} />
-          {error("guests")}
-        </div>
-        <div>
-          <label htmlFor="enquiry-pets" className="mb-1.5 block text-sm text-white/85">
-            Travelling with pets?
-          </label>
-          <select className={inputClass} {...fieldProps("pets")}>
-            <option value="none">No pets</option>
-            <option value="1">Yes, 1 pet</option>
-            <option value="2+">Yes, 2 or more pets</option>
-          </select>
-        </div>
+      <div>
+        <label htmlFor="enquiry-guests" className="mb-1.5 block text-sm text-white/85">
+          Number of guests
+        </label>
+        <input type="number" inputMode="numeric" min={1} max={60} placeholder="e.g. 6" className={inputClass} {...fieldProps("guests")} />
+        {error("guests")}
       </div>
-
-      {values.pets !== "none" && (
-        <div>
-          <label htmlFor="enquiry-petDetails" className="mb-1.5 block text-sm text-white/85">
-            Breed and size <span className="text-white/50">(optional)</span>
-          </label>
-          <input type="text" placeholder="e.g. Labrador, large" className={inputClass} {...fieldProps("petDetails")} />
-        </div>
-      )}
 
       <div>
         <label htmlFor="enquiry-message" className="mb-1.5 block text-sm text-white/85">
@@ -176,7 +152,7 @@ export function EnquiryForm() {
         <textarea
           rows={4}
           maxLength={500}
-          placeholder="Cottage or villa, food preferences, arrival time, questions"
+          placeholder="Cottage or villa, pets, food preferences, arrival time, questions"
           className={`${inputClass} h-auto resize-y py-3`}
           {...fieldProps("message")}
         />
@@ -184,7 +160,7 @@ export function EnquiryForm() {
       </div>
 
       <div className="pt-2">
-        <SwipeToSend label="Swipe to send on WhatsApp" onComplete={submit} />
+        <SwipeToSend label="Swipe to send on WhatsApp" icon={<WhatsAppIcon className="size-[18px] text-whatsapp" />} onComplete={submit} />
         <p className="mt-3 text-center text-[13px] text-white/55">
           Opens WhatsApp with your details filled in. Nothing is sent until you tap send there.
         </p>

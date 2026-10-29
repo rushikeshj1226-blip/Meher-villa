@@ -3,6 +3,7 @@ import Image from "next/image";
 import { location, messages, nearby, villa } from "@/content/villa";
 import { whatsappUrl } from "@/lib/site";
 import { Eyebrow, SectionHeading, buttonStyles } from "@/components/ui/SectionHeading";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { MapFacade } from "./MapFacade";
 
 export function Location() {
@@ -35,6 +36,7 @@ export function Location() {
               </a>
               {whatsapp && (
                 <a href={whatsapp} target="_blank" rel="noopener" className={buttonStyles.ghostLight}>
+                  <WhatsAppIcon className="size-[18px] text-whatsapp" />
                   Ask the Caretaker
                 </a>
               )}

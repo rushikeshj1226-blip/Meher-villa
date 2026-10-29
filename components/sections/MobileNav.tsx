@@ -4,6 +4,7 @@ import { useRef } from "react";
 
 import { buttonStyles } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/Icon";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 type Props = {
   links: { label: string; href: string }[];
@@ -90,7 +91,7 @@ export function MobileNav({ links, whatsapp, phone }: Props) {
               )}
               {whatsapp && (
                 <a href={whatsapp} target="_blank" rel="noopener" onClick={close} className={`${buttonStyles.outline} py-3`}>
-                  <Icon name="chat" className="size-4" />
+                  <WhatsAppIcon className="size-[18px] text-whatsapp" />
                   WhatsApp
                 </a>
               )}

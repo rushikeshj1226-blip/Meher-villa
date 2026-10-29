@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { messages } from "@/content/villa";
 import { site, whatsappUrl } from "@/lib/site";
 import { Icon } from "@/components/ui/Icon";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 // Call / WhatsApp / Enquire bar for phones. It steps aside while the hero or the form is on screen.
 export function MobileBar() {
@@ -46,7 +47,7 @@ export function MobileBar() {
       )}
       {whatsapp && (
         <a href={whatsapp} target="_blank" rel="noopener" className={item}>
-          <Icon name="chat" className="size-5" />
+          <WhatsAppIcon className="size-5 text-whatsapp" />
           WhatsApp
         </a>
       )}

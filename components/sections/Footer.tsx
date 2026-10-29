@@ -1,5 +1,6 @@
 import { footer, nearby, villa } from "@/content/villa";
 import { formatPhone, site } from "@/lib/site";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 export function Footer() {
   return (
@@ -32,7 +33,8 @@ export function Footer() {
             <ul className="mt-3 space-y-1 text-sm text-muted">
               {site.whatsappNumber && (
                 <li>
-                  <a href={`https://wa.me/${site.whatsappNumber}`} target="_blank" rel="noopener" className="inline-block py-1.5 hover:text-ink">
+                  <a href={`https://wa.me/${site.whatsappNumber}`} target="_blank" rel="noopener" className="inline-flex items-center gap-1.5 py-1.5 hover:text-ink">
+                    <WhatsAppIcon className="size-4 text-whatsapp" />
                     WhatsApp {formatPhone(site.whatsappNumber)}
                   </a>
                 </li>
