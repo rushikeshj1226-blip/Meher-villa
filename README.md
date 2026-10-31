@@ -32,4 +32,4 @@ These values are baked in at build time, so rebuild after changing them.
 
 ## How the enquiry form works
 
-Guests fill in name, dates, guests, pets and a message, then swipe the button. The site opens WhatsApp with the message already written to the owner's number; the guest taps send. Nothing is stored on a server. Keyboard users can press Enter on the swipe handle.
+Guests fill in name, dates, number of guests and an optional message (where they can mention pets), then swipe the button. The site opens WhatsApp with the message already written to the owner's number; the guest taps send. Nothing is stored on a server. Keyboard users can press Enter on the swipe handle.

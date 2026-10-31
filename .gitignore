@@ -6,3 +6,7 @@ next-env.d.ts
 .env*.local
 .vercel
 .DS_Store
+
+# Original client photos and videos (about 2 GB). The site uses the web-sized copies in
+# assets/photos/guests and public/videos instead.
+/assets/photos/mehere villa/

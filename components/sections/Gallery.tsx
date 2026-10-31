@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 import type { Photo } from "@/content/villa";
 import { buttonStyles } from "@/components/ui/SectionHeading";
-import { Icon } from "@/components/ui/Icon";
+import { Lightbox } from "@/components/ui/Lightbox";
 
 // "All" shows two full rows; the other tabs show every photo in that category.
 const ALL_PREVIEW = 8;
@@ -14,20 +14,13 @@ export function Gallery({ photos, tabs }: { photos: Photo[]; tabs: readonly stri
   const [tab, setTab] = useState(0);
   const [expanded, setExpanded] = useState(false);
   const [index, setIndex] = useState<number | null>(null);
-  const dialogRef = useRef<HTMLDialogElement>(null);
   const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
-  const swipeStart = useRef<number | null>(null);
 
   const name = tabs[tab];
   const shown = name === "All" ? photos : photos.filter((photo) => photo.category === name);
   const collapsible = name === "All" && shown.length > ALL_PREVIEW;
   const grid = collapsible && !expanded ? shown.slice(0, ALL_PREVIEW) : shown;
   const current = index === null ? null : shown[index];
-
-  useEffect(() => {
-    const dialog = dialogRef.current;
-    if (index !== null && dialog && !dialog.open) dialog.showModal();
-  }, [index]);
 
   const selectTab = (next: number) => {
     const wrapped = (next + tabs.length) % tabs.length;
@@ -120,72 +113,25 @@ export function Gallery({ photos, tabs }: { photos: Photo[]; tabs: readonly stri
         )}
       </div>
 
-      <dialog
-        ref={dialogRef}
-        aria-label="Photo viewer"
+      <Lightbox
+        open={current !== null}
+        label="Photo viewer"
+        status={index === null ? "" : `${name} · ${index + 1} / ${shown.length}`}
+        caption={current?.caption}
         onClose={() => setIndex(null)}
-        onKeyDown={(event) => {
-          if (event.key === "ArrowRight") step(1);
-          if (event.key === "ArrowLeft") step(-1);
-        }}
-        onPointerDown={(event) => (swipeStart.current = event.clientX)}
-        onPointerUp={(event) => {
-          if (swipeStart.current === null) return;
-          const dx = event.clientX - swipeStart.current;
-          swipeStart.current = null;
-          if (Math.abs(dx) > 50) step(dx < 0 ? 1 : -1);
-        }}
-        className="fixed inset-0 m-0 h-dvh max-h-none w-screen max-w-none bg-black/95 p-4 text-white open:grid open:grid-rows-[auto_1fr_auto] backdrop:bg-black/80 sm:p-8"
+        onStep={shown.length > 1 ? step : undefined}
       >
-        <div className="flex items-center justify-between">
-          <span className="text-sm text-white/70" aria-live="polite">
-            {index === null ? "" : `${name} · ${index + 1} / ${shown.length}`}
-          </span>
-          <button
-            type="button"
-            onClick={() => dialogRef.current?.close()}
-            aria-label="Close photo viewer"
-            className="grid size-11 place-items-center rounded-full bg-white/10 hover:bg-white/20"
-          >
-            <Icon name="close" />
-          </button>
-        </div>
-
-        <div className="relative flex min-h-0 items-center justify-center">
-          {current && (
-            <Image
-              key={current.src.src}
-              src={current.src}
-              alt={current.alt}
-              placeholder="blur"
-              sizes="100vw"
-              className="h-auto max-h-full w-auto max-w-full rounded-lg object-contain"
-            />
-          )}
-          {shown.length > 1 && (
-            <>
-              <button
-                type="button"
-                onClick={() => step(-1)}
-                aria-label="Previous photo"
-                className="absolute left-0 grid size-11 place-items-center rounded-full bg-white/10 hover:bg-white/20"
-              >
-                <Icon name="left" />
-              </button>
-              <button
-                type="button"
-                onClick={() => step(1)}
-                aria-label="Next photo"
-                className="absolute right-0 grid size-11 place-items-center rounded-full bg-white/10 hover:bg-white/20"
-              >
-                <Icon name="right" />
-              </button>
-            </>
-          )}
-        </div>
-
-        <p className="pt-4 text-center font-serif text-lg text-white/85">{current?.caption}</p>
-      </dialog>
+        {current && (
+          <Image
+            key={current.src.src}
+            src={current.src}
+            alt={current.alt}
+            placeholder="blur"
+            sizes="100vw"
+            className="h-auto max-h-full w-auto max-w-full rounded-lg object-contain"
+          />
+        )}
+      </Lightbox>
     </>
   );
 }

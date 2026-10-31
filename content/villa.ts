@@ -30,8 +30,34 @@ import bhajaCaves from "@/assets/photos/explore/bhaja-caves-lonavala.jpg";
 import wetNJoy from "@/assets/photos/explore/wet-n-joy-water-park-lonavala.jpg";
 import tigerPoint from "@/assets/photos/explore/tiger-point-waterfall-lonavala.jpg";
 
+import guestsBirthdayGroup from "@/assets/photos/guests/meher-villa-guests-birthday-group.jpg";
+import guestsCookingContest from "@/assets/photos/guests/meher-villa-guests-cooking-contest.jpg";
+import guestsLawnGathering from "@/assets/photos/guests/meher-villa-guests-lawn-gathering.jpg";
+import guestsFamilyGate from "@/assets/photos/guests/meher-villa-guests-family-gate.jpg";
+import guestsFamilyCottage from "@/assets/photos/guests/meher-villa-guests-family-cottage.jpg";
+import guestsBirthdayCake from "@/assets/photos/guests/meher-villa-guests-birthday-cake.jpg";
+import guestsGardenTea from "@/assets/photos/guests/meher-villa-guests-garden-tea.jpg";
+import guestsCoupleCottages from "@/assets/photos/guests/meher-villa-guests-couple-cottages.jpg";
+import guestsFriendsCottage from "@/assets/photos/guests/meher-villa-guests-friends-cottage.jpg";
+import guestsPoolsideCircle from "@/assets/photos/guests/meher-villa-guests-poolside-circle.jpg";
+import guestsBirthdayGarland from "@/assets/photos/guests/meher-villa-guests-birthday-garland.jpg";
+import guestsChefTeam from "@/assets/photos/guests/meher-villa-guests-chef-team.jpg";
+import guestsGroupGarden from "@/assets/photos/guests/meher-villa-guests-group-garden.jpg";
+import guestsFriendsEntrance from "@/assets/photos/guests/meher-villa-guests-friends-entrance.jpg";
+import guestsGardenCircle from "@/assets/photos/guests/meher-villa-guests-garden-circle.jpg";
+import guestsCoupleVeranda from "@/assets/photos/guests/meher-villa-guests-couple-veranda.jpg";
+import guestsKidsCake from "@/assets/photos/guests/meher-villa-guests-kids-cake.jpg";
+import birthdayPoster from "@/assets/photos/guests/meher-villa-guests-birthday-video-poster.jpg";
+import dancingPoster from "@/assets/photos/guests/meher-villa-guests-dancing-video-poster.jpg";
+import eveningLawnPoster from "@/assets/photos/guests/meher-villa-guests-evening-lawn-video-poster.jpg";
+import gamesNightPoster from "@/assets/photos/guests/meher-villa-guests-games-night-video-poster.jpg";
+import villaWalkPoster from "@/assets/photos/guests/meher-villa-guests-villa-walk-video-poster.jpg";
+
 export type Img = { src: StaticImageData; alt: string };
 export type Photo = Img & { caption: string; category: GalleryCategory };
+export type GuestPhoto = Img & { caption: string };
+// Videos live in public/videos; the poster shows until the guest presses play.
+export type Video = { src: string; poster: StaticImageData; caption: string; duration: string };
 export type IconName =
   | "paw" | "snow" | "bath" | "tv" | "fridge" | "sun" | "drop" | "wifi" | "pool" | "table"
   | "ball" | "flame" | "plate" | "car" | "user" | "grass" | "pin" | "home" | "clock";
@@ -125,6 +151,38 @@ export const gallery: Photo[] = [
   { src: villaBedroom2, alt: "Villa bedroom with a double bed and TV", caption: "Another villa bedroom", category: "Rooms" },
   { src: entranceGate, alt: "The Meher Villa entrance gate and sign", caption: "Look for this gate", category: "Lawn & Garden" },
 ];
+
+export const moments = {
+  eyebrow: "Guest Moments",
+  title: "Real Stays, Real Smiles",
+  intro: "Birthdays, family reunions, cooking contests and games nights. A few moments from guests who stayed with us.",
+  videos: [
+    { src: "/videos/meher-villa-birthday-video.mp4", poster: birthdayPoster, caption: "Birthday cake on the lawn", duration: "0:20" },
+    { src: "/videos/meher-villa-dancing-video.mp4", poster: dancingPoster, caption: "Dancing in the dining hall", duration: "0:23" },
+    { src: "/videos/meher-villa-evening-lawn-video.mp4", poster: eveningLawnPoster, caption: "Evenings by the pool", duration: "0:18" },
+    { src: "/videos/meher-villa-games-night-video.mp4", poster: gamesNightPoster, caption: "Games night", duration: "0:20" },
+    { src: "/videos/meher-villa-villa-walk-video.mp4", poster: villaWalkPoster, caption: "A walk past the villa", duration: "0:09" },
+  ] satisfies Video[],
+  photos: [
+    { src: guestsBirthdayGroup, alt: "A large group of guests at a birthday celebration on the lawn", caption: "A birthday on the lawn" },
+    { src: guestsCookingContest, alt: "Guests in chef hats and aprons at a cooking activity", caption: "Cooking contest on the veranda" },
+    { src: guestsLawnGathering, alt: "Guests seated together on the lawn near the pool", caption: "Get-together by the pool" },
+    { src: guestsFamilyGate, alt: "A family with children at the Meher Villa gate", caption: "Family weekend" },
+    { src: guestsFamilyCottage, alt: "A family group in front of a wooden cottage", caption: "Family reunion at the cottages" },
+    { src: guestsBirthdayCake, alt: "Guests around a birthday cake decorated with flowers and balloons", caption: "Cake time" },
+    { src: guestsGardenTea, alt: "Guests chatting over tea in the garden", caption: "Tea in the garden" },
+    { src: guestsCoupleCottages, alt: "A couple in front of the cottages", caption: "A weekend for two" },
+    { src: guestsFriendsCottage, alt: "Friends outside a wooden cottage", caption: "Friends' getaway" },
+    { src: guestsPoolsideCircle, alt: "Guests relaxing in a circle on the lawn by the pool", caption: "Poolside chats" },
+    { src: guestsBirthdayGarland, alt: "Guests celebrating a birthday with a garland and cake", caption: "Celebrating a birthday" },
+    { src: guestsChefTeam, alt: "Guests in chef hats on a cottage veranda", caption: "The chef team" },
+    { src: guestsGroupGarden, alt: "A group of friends in the garden", caption: "A group day out" },
+    { src: guestsFriendsEntrance, alt: "Friends at the villa entrance", caption: "Friends at the villa" },
+    { src: guestsGardenCircle, alt: "Guests sitting together on the lawn between the cottages", caption: "Afternoon on the lawn" },
+    { src: guestsCoupleVeranda, alt: "A couple on a cottage veranda", caption: "On the cottage veranda" },
+    { src: guestsKidsCake, alt: "Children cutting a birthday cake on the lawn", caption: "A kids' birthday party" },
+  ] satisfies GuestPhoto[],
+};
 
 export const play = {
   eyebrow: "Play",

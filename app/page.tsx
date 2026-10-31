@@ -1,10 +1,11 @@
-import { gallery, galleryIntro, galleryTabs } from "@/content/villa";
+import { gallery, galleryIntro, galleryTabs, moments } from "@/content/villa";
 import { buildSchema } from "@/lib/schema";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Header } from "@/components/sections/Header";
 import { Hero } from "@/components/sections/Hero";
 import { Stay } from "@/components/sections/Stay";
 import { Gallery } from "@/components/sections/Gallery";
+import { GuestMoments } from "@/components/sections/GuestMoments";
 import { DayCards, PetBand, Play } from "@/components/sections/Experience";
 import { About, Amenities } from "@/components/sections/Amenities";
 import { Location, Nearby } from "@/components/sections/Location";
@@ -39,6 +40,14 @@ export default function Home() {
         <Play />
         <PetBand />
         <DayCards />
+        <section id="moments" aria-labelledby="moments-title" className="border-y border-line bg-paper py-20 sm:py-28">
+          <div className="mx-auto max-w-6xl px-4 sm:px-8">
+            <div className="reveal">
+              <SectionHeading id="moments-title" eyebrow={moments.eyebrow} title={moments.title} intro={moments.intro} />
+            </div>
+            <GuestMoments videos={moments.videos} photos={moments.photos} />
+          </div>
+        </section>
         <Amenities />
         <Location />
         <About />

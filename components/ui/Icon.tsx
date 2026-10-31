@@ -1,6 +1,6 @@
 import type { IconName } from "@/content/villa";
 
-export type Name = IconName | "arrow" | "arrowUpRight" | "chat" | "phone" | "check" | "close" | "left" | "right" | "menu" | "plus";
+export type Name = IconName | "arrow" | "arrowUpRight" | "chat" | "phone" | "check" | "close" | "left" | "right" | "menu" | "plus" | "play";
 
 const paths: Record<Name, React.ReactNode> = {
   paw: (
@@ -86,6 +86,7 @@ const paths: Record<Name, React.ReactNode> = {
   right: <path d="M9 5l7 7-7 7" />,
   menu: <path d="M4 7h16M4 12h16M4 17h16" />,
   plus: <path d="M12 5v14M5 12h14" />,
+  play: <path d="M8 5.5v13l10.5-6.5z" fill="currentColor" />,
 };
 
 export function Icon({ name, className = "size-5", strokeWidth = 1.75 }: { name: Name; className?: string; strokeWidth?: number }) {
