@@ -1,6 +1,7 @@
-import { gallery, galleryIntro, galleryTabs, moments } from "@/content/villa";
+import { gallery, galleryIntro, galleryTabs, moments, villa } from "@/content/villa";
 import { buildSchema } from "@/lib/schema";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Icon } from "@/components/ui/Icon";
 import { Header } from "@/components/sections/Header";
 import { Hero } from "@/components/sections/Hero";
 import { Stay } from "@/components/sections/Stay";
@@ -46,6 +47,17 @@ export default function Home() {
               <SectionHeading id="moments-title" eyebrow={moments.eyebrow} title={moments.title} intro={moments.intro} />
             </div>
             <GuestMoments videos={moments.videos} photos={moments.photos} />
+            <p className="mt-8 text-center">
+              <a
+                href={villa.instagram.url}
+                target="_blank"
+                rel="noopener"
+                className="inline-flex items-center gap-2 text-sm font-medium underline decoration-line underline-offset-4 hover:decoration-ink"
+              >
+                <Icon name="instagram" className="size-4" />
+                More moments on Instagram {villa.instagram.handle}
+              </a>
+            </p>
           </div>
         </section>
         <Amenities />

@@ -1,5 +1,6 @@
 import { footer, nearby, villa } from "@/content/villa";
 import { formatPhone, site } from "@/lib/site";
+import { Icon } from "@/components/ui/Icon";
 import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 export function Footer() {
@@ -53,6 +54,12 @@ export function Footer() {
                   </a>
                 </li>
               )}
+              <li>
+                <a href={villa.instagram.url} target="_blank" rel="noopener" className="inline-flex items-center gap-1.5 py-1.5 hover:text-ink">
+                  <Icon name="instagram" className="size-4" />
+                  Instagram {villa.instagram.handle}
+                </a>
+              </li>
               <li>
                 <address className="py-1.5 not-italic leading-relaxed">{villa.address.full}</address>
               </li>

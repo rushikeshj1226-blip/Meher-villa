@@ -7,6 +7,7 @@ import cottagesGarden from "@/assets/photos/meher-villa-cottages-garden.jpg";
 import cottageFront from "@/assets/photos/meher-villa-cottage-front.jpg";
 import cottagesLawn from "@/assets/photos/meher-villa-cottages-lawn.jpg";
 import cottagesRow from "@/assets/photos/meher-villa-cottages-row.jpg";
+import cottageGardenPath from "@/assets/photos/meher-villa-cottage-garden-path.jpg";
 import villa3bhk from "@/assets/photos/meher-villa-3bhk-villa.jpg";
 import villaGarden from "@/assets/photos/meher-villa-villa-garden.jpg";
 import villaPatio from "@/assets/photos/meher-villa-villa-patio.jpg";
@@ -18,8 +19,17 @@ import villaBedroom from "@/assets/photos/meher-villa-villa-bedroom.jpg";
 import villaBedroom2 from "@/assets/photos/meher-villa-villa-bedroom-2.jpg";
 import cottageRoom from "@/assets/photos/meher-villa-cottage-room.jpg";
 import cottageInterior from "@/assets/photos/meher-villa-cottage-interior.jpg";
+import cottageDoubleBed from "@/assets/photos/meher-villa-cottage-double-bed.jpg";
+import cottageTvExtraBed from "@/assets/photos/meher-villa-cottage-tv-extra-bed.jpg";
+import cottageDoorLawn from "@/assets/photos/meher-villa-cottage-door-lawn.jpg";
+import cottageRoomLawnView from "@/assets/photos/meher-villa-cottage-room-lawn-view.jpg";
+import bathroomSupportRails from "@/assets/photos/meher-villa-bathroom-support-rails.jpg";
+import bathroomGreyTiles from "@/assets/photos/meher-villa-bathroom-grey-tiles.jpg";
+import bathingArea from "@/assets/photos/meher-villa-bathing-area.jpg";
+import bathroomShower from "@/assets/photos/meher-villa-bathroom-shower.jpg";
 import diningHall from "@/assets/photos/meher-villa-dining-hall.jpg";
 import entranceGate from "@/assets/photos/meher-villa-entrance-gate.jpg";
+import nameSign from "@/assets/photos/meher-villa-name-sign.jpg";
 // Nearby attractions: free-licensed photos from Wikimedia Commons (credits in `nearby.places`).
 import lohagadFort from "@/assets/photos/explore/lohagad-fort-lonavala.jpg";
 import bhushiDam from "@/assets/photos/explore/bhushi-dam-lonavala.jpg";
@@ -74,6 +84,7 @@ export const villa = {
     full: "Plot No 42, Pawan Nagar, Dongar Wadi, Kevaregaon, Lonavala, Maharashtra 410401",
   },
   geo: { lat: 18.74072, lng: 73.434685 },
+  instagram: { url: "https://www.instagram.com/zerksiss_irani/", handle: "@zerksiss_irani" },
 };
 
 export const seo = {
@@ -137,6 +148,7 @@ export const gallery: Photo[] = [
   { src: lawn, alt: "Wide green lawn at Meher Villa", caption: "Room to run, for kids and dogs", category: "Lawn & Garden" },
   { src: villa3bhk, alt: "The 3BHK villa with a stone facade", caption: "The 3BHK villa", category: "Villa" },
   { src: cottageFront, alt: "Front of a wooden cottage with a veranda", caption: "One of eight cottages", category: "Cottages" },
+  { src: cottageGardenPath, alt: "Stone path across the lawn between the cottages, with the pool beyond", caption: "The garden path to the pool", category: "Cottages" },
   { src: poolDeck, alt: "Swimming pool and deck with the villa behind", caption: "Poolside", category: "Pool" },
   { src: diningHall, alt: "Dining hall with glass walls and garden views", caption: "The dining hall", category: "Rooms" },
   { src: swimmingPool, alt: "Swimming pool surrounded by palms", caption: "Afternoons by the pool", category: "Pool" },
@@ -148,6 +160,14 @@ export const gallery: Photo[] = [
   { src: gardenHills, alt: "Garden path with hills in the distance", caption: "Hills on the horizon", category: "Lawn & Garden" },
   { src: cottageRoom, alt: "Wooden cottage bedroom with a double bed", caption: "Inside a cottage", category: "Rooms" },
   { src: cottageInterior, alt: "Cottage interior with a double bed, extra bed and wardrobe", caption: "A cottage for 2 + 1", category: "Rooms" },
+  { src: cottageDoubleBed, alt: "Cottage double bed with white linen, side table and wardrobe", caption: "A cottage double bed", category: "Rooms" },
+  { src: cottageTvExtraBed, alt: "Cottage with a wall-mounted TV, extra single bed and storage bench", caption: "TV and an extra bed", category: "Rooms" },
+  { src: cottageDoorLawn, alt: "Cottage door opening onto a veranda chair and the lawn", caption: "Step out onto the lawn", category: "Rooms" },
+  { src: cottageRoomLawnView, alt: "Cottage room with a fridge and doors open to the lawn", caption: "From your room to the lawn", category: "Rooms" },
+  { src: bathroomSupportRails, alt: "Attached bathroom with a western toilet, washbasin and fold-down support rail", caption: "Bathroom with support rails", category: "Rooms" },
+  { src: bathroomShower, alt: "Attached bathroom with a shower, western toilet, washbasin and grab bars", caption: "Shower and grab bars", category: "Rooms" },
+  { src: bathroomGreyTiles, alt: "Grey-tiled attached bathroom with a western toilet and grab bar", caption: "An attached bathroom", category: "Rooms" },
+  { src: bathingArea, alt: "Bathing area with taps, a bucket, a stool and a grab bar", caption: "The bathing area", category: "Rooms" },
   { src: villaBedroom2, alt: "Villa bedroom with a double bed and TV", caption: "Another villa bedroom", category: "Rooms" },
   { src: entranceGate, alt: "The Meher Villa entrance gate and sign", caption: "Look for this gate", category: "Lawn & Garden" },
 ];
@@ -376,6 +396,7 @@ export const enquiry = {
   eyebrow: "Book your stay",
   title: "Check Availability",
   intro: "Tell us your dates and we'll reply on WhatsApp with availability and the exact price.",
+  image: { src: nameSign, alt: "Wooden Meher Villa name sign set in the red stone entrance wall" },
 };
 
 export const footer = {

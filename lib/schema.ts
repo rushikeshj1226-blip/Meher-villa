@@ -31,7 +31,7 @@ export function buildSchema() {
         petsAllowed: true,
         availableLanguage: ["en", "hi"],
         amenityFeature: amenityNames.map((name) => ({ "@type": "LocationFeatureSpecification", name, value: true })),
-        sameAs: ["https://www.makemytrip.com/hotels/meher_villa-details-lonavala.html"],
+        sameAs: ["https://www.makemytrip.com/hotels/meher_villa-details-lonavala.html", villa.instagram.url],
       },
       {
         "@type": "WebSite",

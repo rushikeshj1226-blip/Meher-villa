@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { enquiry, gallery, messages } from "@/content/villa";
+import { enquiry, messages } from "@/content/villa";
 import { formatPhone, site, whatsappUrl } from "@/lib/site";
 import { Eyebrow } from "@/components/ui/SectionHeading";
 import { Icon } from "@/components/ui/Icon";
@@ -9,7 +9,7 @@ import { EnquiryForm } from "./EnquiryForm";
 
 export function Enquiry() {
   const whatsapp = whatsappUrl(messages.general);
-  const photo = gallery.find((item) => item.caption === "Afternoons by the pool") ?? gallery[0];
+  const photo = enquiry.image;
 
   return (
     <section id="enquire" aria-labelledby="enquire-title" className="bg-brown text-white">
