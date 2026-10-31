@@ -73,7 +73,7 @@ export function Footer() {
         </div>
 
         <details className="mt-4 text-xs text-muted">
-          <summary className="inline-block cursor-pointer list-none underline decoration-muted/40 underline-offset-2 hover:text-ink [&::-webkit-details-marker]:hidden">
+          <summary className="-my-2 inline-block cursor-pointer list-none py-2 underline decoration-muted/40 underline-offset-2 hover:text-ink [&::-webkit-details-marker]:hidden">
             Photo credits
           </summary>
           <ul className="mt-3 grid gap-1.5 sm:grid-cols-2">

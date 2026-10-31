@@ -36,7 +36,8 @@ export function Gallery({ photos, tabs }: { photos: Photo[]; tabs: readonly stri
       <div
         role="tablist"
         aria-label="Photo categories"
-        className="scrollbar-none -mx-4 mt-10 flex gap-7 overflow-x-auto border-b border-line px-4 sm:mx-0 sm:justify-center sm:px-0"
+        // On phones the tabs scroll sideways; the fade on the right shows there are more (Rooms is last).
+        className="scrollbar-none -mx-4 mt-10 flex gap-7 overflow-x-auto border-b border-line pl-4 pr-12 [mask-image:linear-gradient(to_right,#000_calc(100%_-_3rem),transparent)] sm:mx-0 sm:justify-center sm:px-0 sm:[mask-image:none]"
         onKeyDown={(event) => {
           if (event.key === "ArrowRight") selectTab(tab + 1);
           else if (event.key === "ArrowLeft") selectTab(tab - 1);
@@ -58,7 +59,10 @@ export function Gallery({ photos, tabs }: { photos: Photo[]; tabs: readonly stri
             aria-selected={tab === i}
             aria-controls="gallery-panel"
             tabIndex={tab === i ? 0 : -1}
-            onClick={() => setTab(i)}
+            onClick={(event) => {
+              setTab(i);
+              event.currentTarget.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
+            }}
             className={`-mb-px shrink-0 whitespace-nowrap border-b-2 pb-3 text-[13px] uppercase tracking-[0.16em] transition-colors ${
               tab === i ? "border-gold text-ink" : "border-transparent text-muted hover:text-ink"
             }`}

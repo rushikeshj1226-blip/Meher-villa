@@ -43,5 +43,6 @@ export const buttonStyles = {
   gold: `${pill} bg-gold text-ink hover:bg-[#f2b54c]`,
   outline: `${pill} text-ink ring-1 ring-ink/25 hover:bg-ink hover:text-white`,
   ghostLight: `${pill} text-white ring-1 ring-white/50 hover:bg-white hover:text-ink`,
-  link: "group inline-flex items-center gap-1.5 text-[13px] font-medium underline decoration-ink/30 underline-offset-[6px] transition-colors hover:decoration-ink",
+  // The negative margin cancels the padding, so the tap area grows to 40px without moving anything.
+  link: "group -my-2.5 inline-flex items-center gap-1.5 py-2.5 text-[13px] font-medium underline decoration-ink/30 underline-offset-[6px] transition-colors hover:decoration-ink",
 };

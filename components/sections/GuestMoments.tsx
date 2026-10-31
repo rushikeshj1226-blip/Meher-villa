@@ -26,9 +26,11 @@ export function GuestMoments({ videos, photos }: { videos: Video[]; photos: Gues
 
   return (
     <>
-      <ul className="scrollbar-none -mx-4 mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 sm:mx-0 sm:grid sm:grid-cols-3 sm:overflow-visible sm:px-0 lg:grid-cols-5">
+      {/* Phones: a swipeable row (scroll-px keeps the first card on the gutter when it snaps).
+          Wider: wrapped rows with the last row centred, so five videos never leave a gap. */}
+      <ul className="scrollbar-none -mx-4 mt-12 flex snap-x snap-mandatory scroll-px-4 gap-4 overflow-x-auto px-4 sm:mx-0 sm:flex-wrap sm:justify-center sm:overflow-visible sm:px-0">
         {videos.map((item) => (
-          <li key={item.src} className="w-[62%] shrink-0 snap-start sm:w-auto">
+          <li key={item.src} className="w-[62%] shrink-0 snap-start sm:w-[calc((100%-2rem)/3)] lg:w-[calc((100%-4rem)/5)]">
             <button
               type="button"
               onClick={() => setVideo(item)}

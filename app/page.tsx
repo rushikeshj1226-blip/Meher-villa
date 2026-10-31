@@ -52,10 +52,14 @@ export default function Home() {
                 href={villa.instagram.url}
                 target="_blank"
                 rel="noopener"
-                className="inline-flex items-center gap-2 text-sm font-medium underline decoration-line underline-offset-4 hover:decoration-ink"
+                className="-my-2.5 inline-flex flex-wrap items-center justify-center gap-x-1.5 py-2.5 text-sm font-medium underline decoration-line underline-offset-4 hover:decoration-ink"
               >
-                <Icon name="instagram" className="size-4" />
-                More moments on Instagram {villa.instagram.handle}
+                {/* Two pieces, so on the narrowest phones the handle wraps whole and the icon stays with its words. */}
+                <span className="inline-flex items-center gap-2">
+                  <Icon name="instagram" className="size-4" />
+                  More moments on Instagram
+                </span>
+                <span>{villa.instagram.handle}</span>
               </a>
             </p>
           </div>

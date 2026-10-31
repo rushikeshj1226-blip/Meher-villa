@@ -50,7 +50,7 @@ export function PetBand() {
             ))}
           </ul>
           <div className="mt-9 flex flex-wrap items-center justify-center gap-6">
-            <a href="#faq" className="text-[13px] font-medium underline decoration-white/40 underline-offset-[6px] hover:decoration-white">
+            <a href="#faq" className="-my-2.5 py-2.5 text-[13px] font-medium underline decoration-white/40 underline-offset-[6px] hover:decoration-white">
               Pet FAQs
             </a>
             <a
@@ -80,7 +80,7 @@ export function DayCards() {
       </div>
       <div className="mt-14 grid gap-8 md:grid-cols-3">
         {day.cards.map((card) => (
-          <article key={card.title} className="reveal group">
+          <article key={card.title} className="reveal group flex flex-col">
             <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
               <Image
                 src={card.image.src}
@@ -95,8 +95,9 @@ export function DayCards() {
               <h3 className="text-xl">{card.title}</h3>
               <span className="shrink-0 rounded-full bg-paper px-2.5 py-1 text-[11px] text-muted ring-1 ring-line">{card.tag}</span>
             </div>
-            <p className="mt-2 text-sm leading-relaxed text-muted">{card.text}</p>
-            <a href="#enquire" className={`${buttonStyles.outline} mt-5 px-4 py-2 text-[13px]`}>
+            <p className="mb-5 mt-2 text-sm leading-relaxed text-muted">{card.text}</p>
+            {/* mt-auto lines the buttons up across cards whose text runs to different lengths. */}
+            <a href="#enquire" className={`${buttonStyles.outline} mt-auto self-start px-4 py-2 text-[13px]`}>
               Plan Your Stay
             </a>
           </article>
