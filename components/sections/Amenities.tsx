@@ -6,7 +6,7 @@ import { Icon } from "@/components/ui/Icon";
 
 export function Amenities() {
   return (
-    <section id="amenities" aria-labelledby="amenities-title" className="mx-auto max-w-6xl px-4 pb-20 sm:px-8 sm:pb-28">
+    <section id="amenities" aria-labelledby="amenities-title" className="mx-auto max-w-6xl px-4 py-20 sm:px-8 sm:py-28">
       <div className="reveal">
         <SectionHeading id="amenities-title" eyebrow={amenities.eyebrow} title={amenities.title} intro={amenities.intro} />
       </div>
