@@ -191,7 +191,7 @@ export const moments = {
     { src: guestsFamilyCottage, alt: "A family group in front of a wooden cottage", caption: "Family reunion at the cottages" },
     { src: guestsBirthdayCake, alt: "Guests around a birthday cake decorated with flowers and balloons", caption: "Cake time" },
     { src: guestsGardenTea, alt: "Guests chatting over tea in the garden", caption: "Tea in the garden" },
-    { src: guestsCoupleCottages, alt: "A couple in front of the cottages", caption: "A weekend for two" },
+    { src: guestsCoupleCottages, alt: "Monaz Mevawalla of TMKOC at Meher Villa, in front of the cottages", caption: "Monaz Mevawalla - TMKOC" },
     { src: guestsFriendsCottage, alt: "Friends outside a wooden cottage", caption: "Friends' getaway" },
     { src: guestsPoolsideCircle, alt: "Guests relaxing in a circle on the lawn by the pool", caption: "Poolside chats" },
     { src: guestsBirthdayGarland, alt: "Guests celebrating a birthday with a garland and cake", caption: "Celebrating a birthday" },
