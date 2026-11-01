@@ -7,6 +7,7 @@ import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 export function Hero() {
   const whatsapp = whatsappUrl(messages.general);
+  const [area, ...rest] = hero.eyebrow.split(" · ");
 
   return (
     <section
@@ -25,7 +26,13 @@ export function Hero() {
       <div className="absolute inset-0 -z-10 bg-black/50" />
 
       <div className="mx-auto flex w-full max-w-4xl flex-col items-center px-4 text-center">
-        <p className="animate-fade-up text-[11px] font-medium uppercase tracking-[0.32em] text-white/90">{hero.eyebrow}</p>
+        {/* Phones break after the first place name, so a separator never starts a line. */}
+        <p className="animate-fade-up text-[11px] font-medium uppercase leading-relaxed tracking-[0.32em] text-white/90">
+          {area}
+          <span className="hidden sm:inline"> · </span>
+          <br className="sm:hidden" />
+          {rest.join(" · ")}
+        </p>
         <h1 className="mt-5 animate-fade-up [animation-delay:120ms]">
           <span className="block text-[3.6rem] leading-none sm:text-[6.5rem]">{hero.title}</span>
           <span className="mt-5 block font-sans text-lg sm:text-xl">{hero.subtitle}</span>

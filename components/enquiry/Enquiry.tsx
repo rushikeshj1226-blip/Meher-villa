@@ -14,10 +14,13 @@ export function Enquiry() {
   return (
     <section id="enquire" aria-labelledby="enquire-title" className="bg-brown text-white">
       <div className="grid *:min-w-0 lg:grid-cols-[1fr_1.15fr]">
-        <div className="relative hidden lg:block">
-          <Image src={photo.src} alt={photo.alt} fill placeholder="blur" sizes="45vw" className="object-cover" />
-          <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/10 to-transparent" />
-          <ul className="absolute inset-x-0 bottom-0 space-y-3 p-10 text-sm">
+        {/* Phones and tablets: a 4:3 photo above the form. Desktop: the full-height column beside it. */}
+        <div className="relative aspect-[4/3] lg:aspect-auto">
+          <Image src={photo.src} alt={photo.alt} fill placeholder="blur" sizes="(min-width: 1024px) 45vw, 100vw" className="object-cover" />
+          {/* The contact links sit over the photo on desktop only; on smaller crops they would cover the sign,
+              and phones already have Call and WhatsApp in the menu and the bottom bar. */}
+          <div className="absolute inset-0 hidden bg-linear-to-t from-black/70 via-black/10 to-transparent lg:block" />
+          <ul className="absolute inset-x-0 bottom-0 hidden space-y-3 p-10 text-sm lg:block">
             {whatsapp && (
               <li>
                 <a href={whatsapp} target="_blank" rel="noopener" className="inline-flex items-center gap-2.5 hover:text-gold">

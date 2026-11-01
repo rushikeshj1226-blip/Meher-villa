@@ -11,7 +11,6 @@ import cottageGardenPath from "@/assets/photos/meher-villa-cottage-garden-path.j
 import villa3bhk from "@/assets/photos/meher-villa-3bhk-villa.jpg";
 import villaGarden from "@/assets/photos/meher-villa-villa-garden.jpg";
 import villaPatio from "@/assets/photos/meher-villa-villa-patio.jpg";
-import lawnPool from "@/assets/photos/meher-villa-lawn-pool.jpg";
 import lawn from "@/assets/photos/meher-villa-lawn.jpg";
 import gardenSeating from "@/assets/photos/meher-villa-garden-seating.jpg";
 import gardenHills from "@/assets/photos/meher-villa-garden-hills.jpg";
@@ -75,7 +74,7 @@ export type IconName =
 export const villa = {
   name: "Meher Villa",
   tagline: "A pet-friendly villa near Lonavala",
-  hostSince: 2017,
+  hostSince: 2013,
   address: {
     street: "Plot No 42, Pawan Nagar, Dongar Wadi, Kevaregaon",
     locality: "Lonavala",
@@ -105,11 +104,11 @@ export const nav = [
 ];
 
 export const hero = {
-  eyebrow: "Kevaregaon · Lonavala",
+  eyebrow: "Dongergaonwadi · Kevregaon · Lonavala",
   title: "Meher Villa",
   subtitle: "A pet-friendly villa with a pool in Lonavala",
   intro: "Eight cottages and a 3BHK villa around a pool and a big green lawn. Bring the family. Bring the dog.",
-  image: { src: poolCottages, alt: "Swimming pool, lawn and wooden cottages at Meher Villa, Lonavala" },
+  image: { src: poolCottages, alt: "Swimming pool, lawn and wooden-look cottages at Meher Villa, Lonavala" },
 };
 
 export const stay = {
@@ -119,8 +118,8 @@ export const stay = {
   options: [
     {
       name: "Cottages",
-      text: "Eight wooden cottages for 2 guests plus 1 extra, each with a veranda facing the lawn.",
-      image: { src: cottageFront, alt: "A wooden cottage with a veranda at Meher Villa" },
+      text: "Eight wooden-look cottages for 2 guests plus 1 extra, each with a veranda facing the lawn.",
+      image: { src: cottageFront, alt: "A wooden-look cottage with a veranda at Meher Villa" },
       icons: ["snow", "tv", "wifi", "sun"] as IconName[],
     },
     {
@@ -147,18 +146,18 @@ export const gallery: Photo[] = [
   { src: villaBedroom, alt: "Villa bedroom opening onto the lawn", caption: "A villa bedroom", category: "Rooms" },
   { src: lawn, alt: "Wide green lawn at Meher Villa", caption: "Room to run, for kids and dogs", category: "Lawn & Garden" },
   { src: villa3bhk, alt: "The 3BHK villa with a stone facade", caption: "The 3BHK villa", category: "Villa" },
-  { src: cottageFront, alt: "Front of a wooden cottage with a veranda", caption: "One of eight cottages", category: "Cottages" },
+  { src: cottageFront, alt: "Front of a wooden-look cottage with a veranda", caption: "One of eight cottages", category: "Cottages" },
   { src: cottageGardenPath, alt: "Stone path across the lawn between the cottages, with the pool beyond", caption: "The garden path to the pool", category: "Cottages" },
   { src: poolDeck, alt: "Swimming pool and deck with the villa behind", caption: "Poolside", category: "Pool" },
   { src: diningHall, alt: "Dining hall with glass walls and garden views", caption: "The dining hall", category: "Rooms" },
   { src: swimmingPool, alt: "Swimming pool surrounded by palms", caption: "Afternoons by the pool", category: "Pool" },
   { src: cottagesLawn, alt: "Cottages along the lawn among trees", caption: "Cottages on the lawn", category: "Cottages" },
-  { src: cottagesRow, alt: "A row of wooden cottages facing the lawn", caption: "The cottage lawn", category: "Cottages" },
+  { src: cottagesRow, alt: "A row of wooden-look cottages facing the lawn", caption: "The cottage lawn", category: "Cottages" },
   { src: villaGarden, alt: "Stone wall of the villa with the garden and hills", caption: "The villa garden", category: "Villa" },
   { src: villaPatio, alt: "Villa patio with flowers and chairs", caption: "The villa patio", category: "Villa" },
   { src: gardenSeating, alt: "Shaded garden seating under the trees", caption: "Shade for lazy afternoons", category: "Lawn & Garden" },
   { src: gardenHills, alt: "Garden path with hills in the distance", caption: "Hills on the horizon", category: "Lawn & Garden" },
-  { src: cottageRoom, alt: "Wooden cottage bedroom with a double bed", caption: "Inside a cottage", category: "Rooms" },
+  { src: cottageRoom, alt: "Cottage bedroom with a double bed", caption: "Inside a cottage", category: "Rooms" },
   { src: cottageInterior, alt: "Cottage interior with a double bed, extra bed and wardrobe", caption: "A cottage for 2 + 1", category: "Rooms" },
   { src: cottageDoubleBed, alt: "Cottage double bed with white linen, side table and wardrobe", caption: "A cottage double bed", category: "Rooms" },
   { src: cottageTvExtraBed, alt: "Cottage with a wall-mounted TV, extra single bed and storage bench", caption: "TV and an extra bed", category: "Rooms" },
@@ -188,11 +187,11 @@ export const moments = {
     { src: guestsCookingContest, alt: "Guests in chef hats and aprons at a cooking activity", caption: "Cooking contest on the veranda" },
     { src: guestsLawnGathering, alt: "Guests seated together on the lawn near the pool", caption: "Get-together by the pool" },
     { src: guestsFamilyGate, alt: "A family with children at the Meher Villa gate", caption: "Family weekend" },
-    { src: guestsFamilyCottage, alt: "A family group in front of a wooden cottage", caption: "Family reunion at the cottages" },
+    { src: guestsFamilyCottage, alt: "A family group in front of a wooden-look cottage", caption: "Family reunion at the cottages" },
     { src: guestsBirthdayCake, alt: "Guests around a birthday cake decorated with flowers and balloons", caption: "Cake time" },
     { src: guestsGardenTea, alt: "Guests chatting over tea in the garden", caption: "Tea in the garden" },
     { src: guestsCoupleCottages, alt: "Monaz Mevawalla of TMKOC at Meher Villa, in front of the cottages", caption: "Monaz Mevawalla - TMKOC" },
-    { src: guestsFriendsCottage, alt: "Friends outside a wooden cottage", caption: "Friends' getaway" },
+    { src: guestsFriendsCottage, alt: "Friends outside a wooden-look cottage", caption: "Friends' getaway" },
     { src: guestsPoolsideCircle, alt: "Guests relaxing in a circle on the lawn by the pool", caption: "Poolside chats" },
     { src: guestsBirthdayGarland, alt: "Guests celebrating a birthday with a garland and cake", caption: "Celebrating a birthday" },
     { src: guestsChefTeam, alt: "Guests in chef hats on a cottage veranda", caption: "The chef team" },
@@ -221,7 +220,7 @@ export const pets = {
   text: "Most Lonavala weekends mean leaving your dog with a sitter. Here, your pet comes along, with a big lawn to run on and quiet village lanes all around.",
   points: ["Pets welcome", "Big lawn to run on", "No resident animals", "Ground-floor cottages"],
   note: "Tell us your pet's breed and size when you enquire, and we'll confirm the pet terms with your quote.",
-  image: { src: lawnPool, alt: "Big green lawn with the pool and cottages at Meher Villa, a pet-friendly villa near Lonavala" },
+  image: { src: cottageGardenPath, alt: "Garden path across the lawn between the cottages at Meher Villa, a pet-friendly villa near Lonavala" },
 };
 
 export const day = {
@@ -257,13 +256,13 @@ export const about = {
   eyebrow: "About",
   title: "A Peaceful Pet-Friendly Villa near Lonavala",
   paragraphs: [
-    "Meher Villa sits in Kevaregaon, a quiet village pocket 4.4 km from Lonavala railway station, where the town gives way to fields, forts and monsoon waterfalls. Eight wooden cottages and a 3BHK villa are set around a swimming pool and a wide lawn, so there is room for every kind of weekend.",
+    "Meher Villa sits in Kevaregaon, a quiet village pocket 4.4 km from Lonavala railway station, where the town gives way to fields, forts and monsoon waterfalls. Eight wooden-look cottages and a 3BHK villa are set around a swimming pool and a wide lawn, so there is room for every kind of weekend.",
     "Every room is air-conditioned, with an attached bathroom, a TV, a refrigerator, hot water round the clock and RO drinking water. And yes, your dog can come too: pets are welcome, and our caretaker is on site to help you settle in.",
   ],
   stats: [
     { value: "8", label: "Cottages" },
     { value: "3BHK", label: "Family villa" },
-    { value: "2017", label: "Hosting since" },
+    { value: "2013", label: "Hosting since" },
   ],
   cards: [
     { title: "Gardens & Lawn", text: "Shaded seating, flowering beds and open grass between the cottages.", image: { src: gardenSeating, alt: "Shaded garden seating under the trees" } },

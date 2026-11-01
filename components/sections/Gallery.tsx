@@ -22,10 +22,22 @@ export function Gallery({ photos, tabs }: { photos: Photo[]; tabs: readonly stri
   const grid = collapsible && !expanded ? shown.slice(0, ALL_PREVIEW) : shown;
   const current = index === null ? null : shown[index];
 
+  // Slides only the tab strip sideways, and only if the tab is half hidden: clear of the 16px gutter
+  // on the left and the 48px fade on the right. It never scrolls the page or the strip vertically.
+  const revealTab = (el: HTMLElement | null | undefined) => {
+    const strip = el?.parentElement;
+    if (!el || !strip || strip.scrollWidth <= strip.clientWidth) return;
+    const s = strip.getBoundingClientRect();
+    const t = el.getBoundingClientRect();
+    if (t.left < s.left + 16) strip.scrollBy({ left: t.left - s.left - 16, behavior: "smooth" });
+    else if (t.right > s.right - 48) strip.scrollBy({ left: t.right - s.right + 48, behavior: "smooth" });
+  };
+
   const selectTab = (next: number) => {
     const wrapped = (next + tabs.length) % tabs.length;
     setTab(wrapped);
-    tabRefs.current[wrapped]?.focus();
+    tabRefs.current[wrapped]?.focus({ preventScroll: true });
+    revealTab(tabRefs.current[wrapped]);
   };
 
   const step = (delta: number) =>
@@ -37,7 +49,8 @@ export function Gallery({ photos, tabs }: { photos: Photo[]; tabs: readonly stri
         role="tablist"
         aria-label="Photo categories"
         // On phones the tabs scroll sideways; the fade on the right shows there are more (Rooms is last).
-        className="scrollbar-none -mx-4 mt-10 flex gap-7 overflow-x-auto border-b border-line pl-4 pr-12 [mask-image:linear-gradient(to_right,#000_calc(100%_-_3rem),transparent)] sm:mx-0 sm:justify-center sm:px-0 sm:[mask-image:none]"
+        // overflow-y-hidden stops the strip moving up and down: the underline's -mb-px leaves 1px it could scroll.
+        className="scrollbar-none -mx-4 mt-10 flex gap-7 overflow-x-auto overflow-y-hidden overscroll-x-contain border-b border-line pl-4 pr-12 [mask-image:linear-gradient(to_right,#000_calc(100%_-_3rem),transparent)] sm:mx-0 sm:justify-center sm:px-0 sm:[mask-image:none]"
         onKeyDown={(event) => {
           if (event.key === "ArrowRight") selectTab(tab + 1);
           else if (event.key === "ArrowLeft") selectTab(tab - 1);
@@ -61,7 +74,7 @@ export function Gallery({ photos, tabs }: { photos: Photo[]; tabs: readonly stri
             tabIndex={tab === i ? 0 : -1}
             onClick={(event) => {
               setTab(i);
-              event.currentTarget.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "nearest" });
+              revealTab(event.currentTarget);
             }}
             className={`-mb-px shrink-0 whitespace-nowrap border-b-2 pb-3 text-[13px] uppercase tracking-[0.16em] transition-colors ${
               tab === i ? "border-gold text-ink" : "border-transparent text-muted hover:text-ink"
