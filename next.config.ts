@@ -40,6 +40,16 @@ const nextConfig: NextConfig = {
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },
+  async redirects() {
+    // The two Vercel addresses serve copies of the site. Sending them permanently to the villa's
+    // own domain gives Google one site to rank instead of three, and old links keep working.
+    return ["meher-villa.vercel.app", "meher-villa-ashen.vercel.app"].map((host) => ({
+      source: "/:path*",
+      has: [{ type: "host" as const, value: host }],
+      destination: "https://www.mehervilla.com/:path*",
+      permanent: true,
+    }));
+  },
 };
 
 export default nextConfig;
