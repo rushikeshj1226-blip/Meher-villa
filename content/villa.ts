@@ -398,7 +398,7 @@ export const houseRules = {
   rules: [
     { title: "ID", text: "The guest who books must be 18 or older. Carry a passport, Aadhaar or other government photo ID; local IDs are accepted." },
     { title: "Groups", text: "Families and groups of friends, including all-male groups, are welcome." },
-    { title: "Parties", text: "Private parties and events are allowed. Please keep music low so everyone can enjoy the quiet." },
+    { title: "Parties", text: "Private parties and events are allowed, from birthdays to family get-togethers. Tell us what you're planning when you enquire." },
     { title: "Pets", text: "Welcome. Keep them on a lead in shared areas and clean up after them." },
   ],
 };
