@@ -5,8 +5,8 @@ import { useState } from "react";
 
 import { Icon } from "@/components/ui/Icon";
 
-// Shows a photo of the gate until the guest asks for the map, so no Google Maps code loads with the page.
-export function MapFacade({ lat, lng, image }: { lat: number; lng: number; image: { src: StaticImageData; alt: string } }) {
+// Shows a photo of the villa until the guest asks for the map, so no Google Maps code loads with the page.
+export function MapFacade({ lat, lng, image }: { lat: number; lng: number; image: { src: StaticImageData; alt: string; caption: string } }) {
   const [showMap, setShowMap] = useState(false);
 
   return (
@@ -21,10 +21,9 @@ export function MapFacade({ lat, lng, image }: { lat: number; lng: number; image
         />
       ) : (
         <>
-          {/* Anchored to the bottom so on wide, short tablet crops the caption sits on the path, not over the name sign. */}
-          <Image src={image.src} alt={image.alt} fill placeholder="blur" sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover object-bottom" />
+          <Image src={image.src} alt={image.alt} fill placeholder="blur" sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
           <div className="absolute inset-x-0 bottom-0 flex flex-wrap items-center justify-between gap-3 bg-linear-to-t from-black/70 to-transparent p-5 pt-20">
-            <span className="font-serif text-lg text-white">Look for this gate</span>
+            <span className="font-serif text-lg text-white">{image.caption}</span>
             <button
               type="button"
               onClick={() => setShowMap(true)}

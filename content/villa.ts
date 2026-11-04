@@ -1,18 +1,24 @@
 import type { StaticImageData } from "next/image";
 
-import poolCottages from "@/assets/photos/meher-villa-pool-cottages.jpg";
-import swimmingPool from "@/assets/photos/meher-villa-swimming-pool.jpg";
-import poolDeck from "@/assets/photos/meher-villa-pool-deck.jpg";
-import cottagesGarden from "@/assets/photos/meher-villa-cottages-garden.jpg";
-import cottageFront from "@/assets/photos/meher-villa-cottage-front.jpg";
-import cottagesLawn from "@/assets/photos/meher-villa-cottages-lawn.jpg";
-import cottagesRow from "@/assets/photos/meher-villa-cottages-row.jpg";
+import heroPoolLawnCottages from "@/assets/photos/meher-villa-hero-pool-lawn-cottages.jpg";
+import lawnGamesSetup from "@/assets/photos/meher-villa-lawn-games-setup.jpg";
+import diningHallGames from "@/assets/photos/meher-villa-dining-hall-games.jpg";
+import poolCottageRow from "@/assets/photos/meher-villa-pool-cottage-row.jpg";
+import poolLoungersCottages from "@/assets/photos/meher-villa-pool-loungers-cottages.jpg";
+import poolNightLoungers from "@/assets/photos/meher-villa-pool-night-loungers.jpg";
+import poolNightLights from "@/assets/photos/meher-villa-pool-night-lights.jpg";
+import cottagesLawnVolleyball from "@/assets/photos/meher-villa-cottages-lawn-volleyball.jpg";
+import cottageFrontPalms from "@/assets/photos/meher-villa-cottage-front-palms.jpg";
+import cottagesNightPalms from "@/assets/photos/meher-villa-cottages-night-palms.jpg";
+import cottagesLawnNight from "@/assets/photos/meher-villa-cottages-lawn-night.jpg";
 import cottageGardenPath from "@/assets/photos/meher-villa-cottage-garden-path.jpg";
-import villa3bhk from "@/assets/photos/meher-villa-3bhk-villa.jpg";
-import villaGarden from "@/assets/photos/meher-villa-villa-garden.jpg";
-import villaPatio from "@/assets/photos/meher-villa-villa-patio.jpg";
-import lawn from "@/assets/photos/meher-villa-lawn.jpg";
-import gardenSeating from "@/assets/photos/meher-villa-garden-seating.jpg";
+import villaFrontGable from "@/assets/photos/meher-villa-villa-front-gable.jpg";
+import villaNightLights from "@/assets/photos/meher-villa-villa-night-lights.jpg";
+import villaHibiscusGarden from "@/assets/photos/meher-villa-villa-hibiscus-garden.jpg";
+import villaGardenPath from "@/assets/photos/meher-villa-villa-garden-path.jpg";
+import cottageVeranda from "@/assets/photos/meher-villa-cottage-veranda.jpg";
+import villa3bhkGarden from "@/assets/photos/meher-villa-3bhk-villa-garden.jpg";
+import gardenSwingBenches from "@/assets/photos/meher-villa-garden-swing-benches.jpg";
 import gardenHills from "@/assets/photos/meher-villa-garden-hills.jpg";
 import villaBedroom from "@/assets/photos/meher-villa-villa-bedroom.jpg";
 import villaBedroom2 from "@/assets/photos/meher-villa-villa-bedroom-2.jpg";
@@ -27,8 +33,21 @@ import bathroomGreyTiles from "@/assets/photos/meher-villa-bathroom-grey-tiles.j
 import bathingArea from "@/assets/photos/meher-villa-bathing-area.jpg";
 import bathroomShower from "@/assets/photos/meher-villa-bathroom-shower.jpg";
 import diningHall from "@/assets/photos/meher-villa-dining-hall.jpg";
-import entranceGate from "@/assets/photos/meher-villa-entrance-gate.jpg";
 import nameSign from "@/assets/photos/meher-villa-name-sign.jpg";
+import villaDiningTable from "@/assets/photos/meher-villa-villa-dining-table.jpg";
+import villaSittingRoom from "@/assets/photos/meher-villa-villa-sitting-room.jpg";
+import gamesIndoorRoom from "@/assets/photos/meher-villa-games-indoor-room.jpg";
+import gamesCarrom from "@/assets/photos/meher-villa-games-carrom.jpg";
+import gamesBoxCricket from "@/assets/photos/meher-villa-games-box-cricket.jpg";
+import gamesLawnNet from "@/assets/photos/meher-villa-games-lawn-net.jpg";
+import gamesKaraokeSpeaker from "@/assets/photos/meher-villa-games-karaoke-speaker.jpg";
+import gardenSwing from "@/assets/photos/meher-villa-garden-swing.jpg";
+import gardenTablesVilla from "@/assets/photos/meher-villa-garden-tables-villa.jpg";
+import lawnStoneRooms from "@/assets/photos/meher-villa-lawn-stone-rooms.jpg";
+import lawnRoomsNight from "@/assets/photos/meher-villa-lawn-rooms-night.jpg";
+import lawnPoolNight from "@/assets/photos/meher-villa-lawn-pool-night.jpg";
+import cottagePathNight from "@/assets/photos/meher-villa-cottage-path-night.jpg";
+import lawnGardenSeating from "@/assets/photos/meher-villa-lawn-garden-seating.jpg";
 // Nearby attractions: free-licensed photos from Wikimedia Commons (credits in `nearby.places`).
 import lohagadFort from "@/assets/photos/explore/lohagad-fort-lonavala.jpg";
 import bhushiDam from "@/assets/photos/explore/bhushi-dam-lonavala.jpg";
@@ -108,7 +127,7 @@ export const hero = {
   title: "Meher Villa",
   subtitle: "A pet-friendly villa with a pool in Lonavala",
   intro: "Eight cottages and a 3BHK villa around a pool and a big green lawn. Bring the family. Bring the dog.",
-  image: { src: poolCottages, alt: "Swimming pool, lawn and wooden-look cottages at Meher Villa, Lonavala" },
+  image: { src: heroPoolLawnCottages, alt: "Swimming pool, lawn and wooden-look cottages among tall palms at Meher Villa, Lonavala" },
 };
 
 export const stay = {
@@ -119,13 +138,13 @@ export const stay = {
     {
       name: "Cottages",
       text: "Eight wooden-look cottages for 2 guests plus 1 extra, each with a veranda facing the lawn.",
-      image: { src: cottageFront, alt: "A wooden-look cottage with a veranda at Meher Villa" },
+      image: { src: cottageVeranda, alt: "A wooden-look cottage with a veranda and chairs at Meher Villa" },
       icons: ["snow", "tv", "wifi", "sun"] as IconName[],
     },
     {
       name: "3BHK Villa",
       text: "Three bedrooms with attached bathrooms and a garden all around, ideal for families.",
-      image: { src: villa3bhk, alt: "The 3BHK villa with stone walls and a sloping red roof" },
+      image: { src: villa3bhkGarden, alt: "The 3BHK villa with stone pillars, a sloping red-tile roof and a stone-paved lawn" },
       icons: ["snow", "tv", "fridge", "sun"] as IconName[],
     },
   ],
@@ -137,26 +156,32 @@ export const galleryIntro = {
   intro: "A glimpse of the pool, the cottages, the villa and the lawn, as guests see them.",
 };
 
-export const galleryTabs = ["All", "Pool", "Cottages", "Villa", "Lawn & Garden", "Rooms"] as const;
+export const galleryTabs = ["All", "Pool", "Cottages", "Villa", "Lawn & Garden", "Games", "Rooms"] as const;
 export type GalleryCategory = Exclude<(typeof galleryTabs)[number], "All">;
 
 export const gallery: Photo[] = [
-  { src: poolCottages, alt: "Pool, lawn and cottages at Meher Villa", caption: "The pool and the cottages", category: "Pool" },
-  { src: cottagesGarden, alt: "Cottages among palms and flowering plants", caption: "Gardens between the cottages", category: "Cottages" },
+  { src: poolCottageRow, alt: "Swimming pool with the row of wooden-look cottages and palms beyond", caption: "The pool and the cottages", category: "Pool" },
+  { src: cottagesLawnVolleyball, alt: "The row of wooden-look cottages among palms, with the lawn, volleyball net and pool in front", caption: "The cottages around the lawn", category: "Cottages" },
   { src: villaBedroom, alt: "Villa bedroom opening onto the lawn", caption: "A villa bedroom", category: "Rooms" },
-  { src: lawn, alt: "Wide green lawn at Meher Villa", caption: "Room to run, for kids and dogs", category: "Lawn & Garden" },
-  { src: villa3bhk, alt: "The 3BHK villa with a stone facade", caption: "The 3BHK villa", category: "Villa" },
-  { src: cottageFront, alt: "Front of a wooden-look cottage with a veranda", caption: "One of eight cottages", category: "Cottages" },
-  { src: cottageGardenPath, alt: "Stone path across the lawn between the cottages, with the pool beyond", caption: "The garden path to the pool", category: "Cottages" },
-  { src: poolDeck, alt: "Swimming pool and deck with the villa behind", caption: "Poolside", category: "Pool" },
+  { src: gardenSwing, alt: "A garden swing and iron benches under shady trees, with the cottages beyond", caption: "A swing under the trees", category: "Lawn & Garden" },
+  { src: villaFrontGable, alt: "Front of the 3BHK villa with its tall gable roof and stone pillars", caption: "The 3BHK villa", category: "Villa" },
+  { src: cottageFrontPalms, alt: "Front of a wooden-look cottage with a veranda, between two palms", caption: "One of eight cottages", category: "Cottages" },
+  { src: cottagesNightPalms, alt: "Three cottages at night, with lights wound around the palm trunks", caption: "The cottages at night", category: "Cottages" },
+  { src: poolLoungersCottages, alt: "Loungers on the pool deck with the cottages and lawn behind", caption: "Loungers by the pool", category: "Pool" },
   { src: diningHall, alt: "Dining hall with glass walls and garden views", caption: "The dining hall", category: "Rooms" },
-  { src: swimmingPool, alt: "Swimming pool surrounded by palms", caption: "Afternoons by the pool", category: "Pool" },
-  { src: cottagesLawn, alt: "Cottages along the lawn among trees", caption: "Cottages on the lawn", category: "Cottages" },
-  { src: cottagesRow, alt: "A row of wooden-look cottages facing the lawn", caption: "The cottage lawn", category: "Cottages" },
-  { src: villaGarden, alt: "Stone wall of the villa with the garden and hills", caption: "The villa garden", category: "Villa" },
-  { src: villaPatio, alt: "Villa patio with flowers and chairs", caption: "The villa patio", category: "Villa" },
-  { src: gardenSeating, alt: "Shaded garden seating under the trees", caption: "Shade for lazy afternoons", category: "Lawn & Garden" },
-  { src: gardenHills, alt: "Garden path with hills in the distance", caption: "Hills on the horizon", category: "Lawn & Garden" },
+  { src: poolNightLoungers, alt: "The pool at night with loungers and fairy lights in the palms", caption: "Evenings by the pool", category: "Pool" },
+  { src: poolNightLights, alt: "The pool lit up at night, with fairy lights along the hedge and the gate beyond", caption: "The pool lit up at night", category: "Pool" },
+  { src: cottagesLawnNight, alt: "The cottages and lawn at night, with lit palms along the path", caption: "The cottage lawn at night", category: "Cottages" },
+  { src: villaHibiscusGarden, alt: "The 3BHK villa seen past hibiscus and frangipani in the garden", caption: "The villa garden", category: "Villa" },
+  { src: villaNightLights, alt: "The 3BHK villa at night, with fairy lights along the roof and hedges", caption: "The villa at night", category: "Villa" },
+  { src: villaGardenPath, alt: "Stone path through red-leaf shrubs to the 3BHK villa", caption: "The garden path to the villa", category: "Villa" },
+  { src: villa3bhkGarden, alt: "The 3BHK villa with stone pillars and a sloping red-tile roof, seen from the paved lawn", caption: "The villa and its lawn", category: "Villa" },
+  { src: gardenTablesVilla, alt: "Wrought-iron tables and chairs on the lawn, with the 3BHK villa behind", caption: "Garden tables by the villa", category: "Lawn & Garden" },
+  { src: lawnStoneRooms, alt: "Wide lawn in front of stone-pillared verandas", caption: "Room to run, for kids and dogs", category: "Lawn & Garden" },
+  { src: lawnGardenSeating, alt: "Open lawn with iron garden seating under the palms", caption: "Shade for lazy afternoons", category: "Lawn & Garden" },
+  { src: lawnPoolNight, alt: "The big lawn at night, with fairy lights and the pool beyond", caption: "The lawn at night", category: "Lawn & Garden" },
+  { src: lawnRoomsNight, alt: "Iron table and chairs on the lawn, with fairy lights along the verandas at night", caption: "Evening lights on the lawn", category: "Lawn & Garden" },
+  { src: cottagePathNight, alt: "Stone path along the cottages at night, with lit palm trunks", caption: "The cottage path at night", category: "Lawn & Garden" },
   { src: cottageRoom, alt: "Cottage bedroom with a double bed", caption: "Inside a cottage", category: "Rooms" },
   { src: cottageInterior, alt: "Cottage interior with a double bed, extra bed and wardrobe", caption: "A cottage for 2 + 1", category: "Rooms" },
   { src: cottageDoubleBed, alt: "Cottage double bed with white linen, side table and wardrobe", caption: "A cottage double bed", category: "Rooms" },
@@ -168,7 +193,13 @@ export const gallery: Photo[] = [
   { src: bathroomGreyTiles, alt: "Grey-tiled attached bathroom with a western toilet and grab bar", caption: "An attached bathroom", category: "Rooms" },
   { src: bathingArea, alt: "Bathing area with taps, a bucket, a stool and a grab bar", caption: "The bathing area", category: "Rooms" },
   { src: villaBedroom2, alt: "Villa bedroom with a double bed and TV", caption: "Another villa bedroom", category: "Rooms" },
-  { src: entranceGate, alt: "The Meher Villa entrance gate and sign", caption: "Look for this gate", category: "Lawn & Garden" },
+  { src: villaDiningTable, alt: "Round glass dining table with wrought-iron chairs, stone walls and red curtains", caption: "The villa's dining table", category: "Rooms" },
+  { src: villaSittingRoom, alt: "Sitting area with wrought-iron chairs, a TV and a cooler against a stone wall", caption: "The villa's sitting room", category: "Rooms" },
+  { src: gamesIndoorRoom, alt: "Indoor games room with a table tennis table, carrom board, sofas and a TV", caption: "The indoor games room", category: "Games" },
+  { src: gamesBoxCricket, alt: "Cricket stumps and a bat on the lawn between two cottages", caption: "Box cricket on the lawn", category: "Games" },
+  { src: gamesLawnNet, alt: "A net strung across the lawn in front of the cottages, with cricket stumps ready", caption: "Badminton and volleyball on the lawn", category: "Games" },
+  { src: gamesCarrom, alt: "Carrom board with the coins set up in the centre", caption: "Carrom", category: "Games" },
+  { src: gamesKaraokeSpeaker, alt: "A portable speaker with two wireless microphones in the garden", caption: "Speaker and mics for karaoke", category: "Games" },
 ];
 
 export const moments = {
@@ -228,9 +259,9 @@ export const day = {
   title: "A Day at Meher Villa",
   intro: "Slow mornings, lazy afternoons and long evenings, all without leaving the gate.",
   cards: [
-    { title: "Poolside Afternoons", tag: "Afternoon", text: "A swim after a morning at the forts, then tea on the deck.", image: { src: swimmingPool, alt: "Swimming pool with a wooden deck" } },
-    { title: "Games on the Lawn", tag: "All day", text: "Box cricket, badminton and volleyball, with the dog joining in.", image: { src: lawn, alt: "Big green lawn between the cottages" } },
-    { title: "Dinner Together", tag: "Evening", text: "Meals in the glass-walled dining hall, or a barbecue under the stars.", image: { src: diningHall, alt: "Dining hall with glass walls and garden views" } },
+    { title: "Poolside Afternoons", tag: "Afternoon", text: "A swim after a morning at the forts, then tea on the deck.", image: { src: poolLoungersCottages, alt: "Loungers on the pool deck, with the cottages and lawn behind" } },
+    { title: "Games on the Lawn", tag: "All day", text: "Box cricket, badminton and volleyball, with the dog joining in.", image: { src: lawnGamesSetup, alt: "Badminton rackets, a shuttlecock and a volleyball on the lawn, with cricket stumps by the cottages" } },
+    { title: "Dinner Together", tag: "Evening", text: "Meals in the dining hall, or a barbecue under the stars.", image: { src: diningHallGames, alt: "Dining hall with long tables and chairs, and a table tennis table and TV at the far end" } },
   ],
 };
 
@@ -265,7 +296,7 @@ export const about = {
     { value: "2013", label: "Hosting since" },
   ],
   cards: [
-    { title: "Gardens & Lawn", text: "Shaded seating, flowering beds and open grass between the cottages.", image: { src: gardenSeating, alt: "Shaded garden seating under the trees" } },
+    { title: "Gardens & Lawn", text: "Shaded seating, flowering beds and open grass between the cottages.", image: { src: gardenSwingBenches, alt: "A canopy swing and iron garden benches on the lawn under shady trees" } },
     { title: "Hill Views", text: "The Sahyadri hills on the horizon, green from June to October.", image: { src: gardenHills, alt: "Garden path with the Lonavala hills behind" } },
   ],
 };
@@ -294,7 +325,7 @@ export const location = {
       text: "June to September is the most beautiful time here, and the wettest. Plan to arrive in daylight, and expect slower traffic near the waterfalls on weekends.",
     },
   ],
-  gateImage: { src: entranceGate, alt: "The Meher Villa entrance gate with the name sign" },
+  gateImage: { src: villaGardenPath, alt: "Stone path through red-leaf shrubs to the 3BHK villa at Meher Villa", caption: "See you at Meher Villa" },
 };
 
 export const nearby = {
